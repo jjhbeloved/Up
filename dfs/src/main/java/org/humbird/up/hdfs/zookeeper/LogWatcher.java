@@ -1,4 +1,4 @@
-package org.humbird.up.hdfs.utils;
+package org.humbird.up.hdfs.zookeeper;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
