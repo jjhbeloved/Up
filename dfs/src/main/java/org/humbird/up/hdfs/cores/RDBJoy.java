@@ -15,8 +15,20 @@ public class RDBJoy implements IJoy {
 
     @Override
     public void make(IAction action) throws Exception {
-        Session session = Constant.hbFactory.openSession();
-        action.Play(session);
-        session.close();
+        Session session = null;
+        try {
+            Constant.hbFactory.openSession();
+            action.play(session);
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+
+    }
+
+    @Override
+    public Object happy(IAction action) throws Exception {
+        return null;
     }
 }

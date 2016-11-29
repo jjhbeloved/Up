@@ -115,16 +115,12 @@
     <value>/etc/hadoop/conf.cloudera.yarn/topology.py</value>
   </property>
   <property>
+    <name>io.file.buffer.size</name>
+    <value>65536</value>
+  </property>
+  <property>
     <name>hadoop.ssl.enabled</name>
     <value>false</value>
-  </property>
-  <property>
-    <name>hadoop.proxyuser.llama.hosts</name>
-    <value>*</value>
-  </property>
-  <property>
-    <name>hadoop.proxyuser.llama.groups</name>
-    <value>*</value>
   </property>
   <property>
     <name>hadoop.ssl.require.client.cert</name>
@@ -145,9 +141,5 @@
     <name>hadoop.ssl.client.conf</name>
     <value>ssl-client.xml</value>
     <final>true</final>
-  </property>
-  <property>
-    <name>hadoop.http.logs.enabled</name>
-    <value>true</value>
   </property>
 </configuration>

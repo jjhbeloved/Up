@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Properties;
 
 /**
@@ -28,5 +29,18 @@ public class MainTest {
         Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@172.16.50.24:1521:dev", properties);
 //        String connectStr = "jdbc:oracle:thin:@172.16.50.24:1521:STARGATE";
         connection.close();
+    }
+
+    @Test
+    public void testHBaseHex() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2025, 12, 31, 23, 59);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.set(2016, 9, 17, 23, 59);
+        System.out.println(calendar.getTimeInMillis());
+        System.out.println(System.nanoTime());
+        System.out.println(String.valueOf((Long.MAX_VALUE - (System.nanoTime() + 10000000000000L)) ));
+//        9223350581679311247
+//             50000000000000
     }
 }

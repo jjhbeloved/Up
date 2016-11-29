@@ -39,7 +39,7 @@ public class ExportHdfsAction implements IAction<FileSystem, List<Path>, File> {
     }
 
     @Override
-    public void Play(FileSystem fs) throws IOException {
+    public void play(FileSystem fs) throws IOException {
 
         final OutputStream[] os = new OutputStream[1];
         final InputStream[] is = new InputStream[1];
@@ -82,6 +82,11 @@ public class ExportHdfsAction implements IAction<FileSystem, List<Path>, File> {
             default:
                 break;
         }
+    }
+
+    @Override
+    public Object duang(FileSystem object) throws Exception {
+        return null;
     }
 
     public File getDest() {

@@ -4,7 +4,10 @@ package org.humbird.up.hdfs.cores.action;
  * Created by david on 16/9/10.
  */
 public interface IAction<O, S, D> {
-    void Play(O object) throws Exception;
+
+    void play(O object) throws Exception;
+
+    Object duang(O object) throws Exception;
 
     D getDest();
 

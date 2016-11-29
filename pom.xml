@@ -11,6 +11,8 @@
     <modules>
         <module>parent</module>
         <module>dfs</module>
+        <module>etl</module>
+        <module>railway</module>
     </modules>
 
     <properties>
@@ -54,7 +56,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-idea-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

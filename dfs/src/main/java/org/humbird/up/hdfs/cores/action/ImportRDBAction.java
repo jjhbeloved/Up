@@ -24,7 +24,7 @@ public class ImportRDBAction implements IAction<Session, List<Object>, Object> {
     private String type;
 
     @Override
-    public void Play(Session session) throws Exception {
+    public void play(Session session) throws Exception {
         Transaction transaction = session.beginTransaction();
         if (sources.size() > 0) {
             session.doWork(connection -> {
@@ -58,6 +58,11 @@ public class ImportRDBAction implements IAction<Session, List<Object>, Object> {
             session.save(dest);
         }
         transaction.commit();
+    }
+
+    @Override
+    public Object duang(Session object) throws Exception {
+        return null;
     }
 
     @Override

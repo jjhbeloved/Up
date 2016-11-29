@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.humbird.up.hdfs.zookeeper.ZK;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -52,11 +51,13 @@ public class Initial {
     private void initHdfs() throws Exception {
 //        Preconditions.checkArgument();
         System.getProperties().put(HADOOP_USER_NAME, properties.getProperty(UP_HDFS_SUPER_USER));
-        ZK.instance().getHDFSActiveNode();
+        // TODO
+        // zookeeper 这里存在一个 非 ha 判断的 bug, 后续修复
+//        ZK.instance().getHDFSActiveNode();
     }
 
     public void close() {
-        ZK.instance().close();
+//        ZK.instance().close();
         if ("on".equalsIgnoreCase(properties.getProperty(UP_RDB_STATUS))) {
             hbFactory.close();
         }

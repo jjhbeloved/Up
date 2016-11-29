@@ -9,4 +9,6 @@ public interface IJoy {
 
     void make(IAction action) throws Exception;
 
+    Object happy(IAction action) throws Exception;
+
 }

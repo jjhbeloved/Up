@@ -5,7 +5,6 @@ import org.apache.hadoop.hbase.client.ConnectionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.humbird.up.hdfs.cores.action.IAction;
-import org.humbird.up.hdfs.utils.HBaseTool;
 
 /**
  * Created by david on 16/9/12.
@@ -16,10 +15,31 @@ public class HBaseJoy implements IJoy {
 
     @Override
     public void make(IAction action) throws Exception {
-        Connection connection = ConnectionFactory.createConnection();
-        HBaseTool.infoClusterStatus(connection.getAdmin().getClusterStatus());
-        action.Play(connection);
-        HBaseTool.infoTables(connection.getAdmin());
-        connection.close();
+        Connection connection = null;
+        try {
+            connection = ConnectionFactory.createConnection();
+//            HBaseTool.infoClusterStatus(connection.getAdmin().getClusterStatus());
+            action.play(connection);
+//            HBaseTool.infoTables(connection.getAdmin());
+        } finally {
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
+
+    @Override
+    public Object happy(IAction action) throws Exception {
+        Connection connection = null;
+        try {
+            connection = ConnectionFactory.createConnection();
+//            HBaseTool.infoClusterStatus(connection.getAdmin().getClusterStatus());
+            return action.duang(connection);
+//            HBaseTool.infoTables(connection.getAdmin());
+        } finally {
+            if (connection != null) {
+                connection.close();
+            }
+        }
     }
 }

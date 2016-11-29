@@ -11,14 +11,6 @@
     <value>*</value>
   </property>
   <property>
-    <name>yarn.log-aggregation-enable</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>yarn.log-aggregation.retain-seconds</name>
-    <value>604800</value>
-  </property>
-  <property>
     <name>yarn.resourcemanager.address</name>
     <value>master.huacloud.test:8032</value>
   </property>
@@ -41,22 +33,6 @@
   <property>
     <name>yarn.resourcemanager.webapp.https.address</name>
     <value>master.huacloud.test:8090</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.recovery.enabled</name>
-    <value>false</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.proxy-user-privileges.enabled</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.nodes.include-path</name>
-    <value>/var/run/cloudera-scm-agent/process/251-yarn-RESOURCEMANAGER/nodes_allow.txt</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.nodes.exclude-path</name>
-    <value>/var/run/cloudera-scm-agent/process/251-yarn-RESOURCEMANAGER/nodes_exclude.txt</value>
   </property>
   <property>
     <name>yarn.resourcemanager.client.thread-count</name>
@@ -131,10 +107,6 @@
     <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
   </property>
   <property>
-    <name>yarn.scheduler.fair.allow-undeclared-pools</name>
-    <value>true</value>
-  </property>
-  <property>
     <name>yarn.scheduler.fair.user-as-default-queue</name>
     <value>true</value>
   </property>
@@ -151,27 +123,7 @@
     <value>false</value>
   </property>
   <property>
-    <name>yarn.scheduler.fair.continuous-scheduling-enabled</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>yarn.scheduler.fair.locality-delay-node-ms</name>
-    <value>2000</value>
-  </property>
-  <property>
-    <name>yarn.scheduler.fair.locality-delay-rack-ms</name>
-    <value>4000</value>
-  </property>
-  <property>
-    <name>yarn.scheduler.fair.continuous-scheduling-sleep-ms</name>
-    <value>5</value>
-  </property>
-  <property>
     <name>yarn.resourcemanager.max-completed-applications</name>
     <value>10000</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.zk-timeout-ms</name>
-    <value>60000</value>
   </property>
 </configuration>

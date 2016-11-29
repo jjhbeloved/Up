@@ -36,7 +36,7 @@ public class DeleteHdfsAction implements IAction<FileSystem, List<Path>, Path> {
     }
 
     @Override
-    public void Play(FileSystem fs) throws IOException {
+    public void play(FileSystem fs) throws IOException {
 
         sources.forEach( p -> {
             try {
@@ -45,6 +45,11 @@ public class DeleteHdfsAction implements IAction<FileSystem, List<Path>, Path> {
                 LOGGER.error(e.getMessage());
             }
         });
+    }
+
+    @Override
+    public Object duang(FileSystem object) throws Exception {
+        return null;
     }
 
     public Path getDest() {

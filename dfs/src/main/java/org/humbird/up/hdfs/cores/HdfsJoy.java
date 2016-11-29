@@ -15,8 +15,19 @@ public class HdfsJoy implements IJoy {
 
     @Override
     public void make(IAction iAction) throws Exception {
-        FileSystem fs = FileSystem.get(Constant.hdfcConfiguration);
-        iAction.Play(fs);
-        fs.close();
+        FileSystem fs = null;
+        try {
+            fs = FileSystem.get(Constant.hdfcConfiguration);
+            iAction.play(fs);
+        } finally {
+            if (fs != null) {
+                fs.close();
+            }
+        }
+    }
+
+    @Override
+    public Object happy(IAction action) throws Exception {
+        return null;
     }
 }
