@@ -23,11 +23,15 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="dfs" />
+        <module name="etl" />
+        <module name="railway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dfs" target="1.8" />
+      <module name="etl" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="railway" target="1.8" />
       <module name="Up" target="1.5" />
     </bytecodeTargetLevel>
   </component>

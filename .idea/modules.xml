@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dfs/dfs.iml" filepath="$PROJECT_DIR$/dfs/dfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/etl/etl.iml" filepath="$PROJECT_DIR$/etl/etl.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/railway/railway.iml" filepath="$PROJECT_DIR$/railway/railway.iml" />
     </modules>
   </component>
 </project>
