@@ -17,7 +17,7 @@
         <cloudera.manager.version>5.6.1</cloudera.manager.version>
         <hadoop.version>2.7.2</hadoop.version>
         <hbase.version>1.2.2</hbase.version>
-        <hibernate.version>5.2.2.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <guava.version>15.0</guava.version>
         <mysql.version>5.1.39</mysql.version>
         <oracle.version>11.2.0.1.0</oracle.version>
